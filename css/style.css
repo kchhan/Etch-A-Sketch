@@ -1,0 +1,104 @@
+:root {
+  --primary-color: #bb9999;
+  --grid-rows: 1;
+  --grid-cols: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Cabin Sketch", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1516053256215-94022213b13c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80");
+  background-repeat: space;
+  background-position: top;
+  background-size: cover;
+}
+
+button {
+  padding: 7px 15px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.main-container {
+  max-width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  background: var(--primary-color);
+}
+
+.main-container header {
+  font-size: 5rem;
+  text-align: center;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 70%;
+  margin: auto;
+}
+
+nav input {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+nav button {
+  font-size: 1.1rem;
+}
+
+nav .black {
+  background-color: #444;
+  color: #fff;
+  margin-left: 0;
+}
+
+nav .greyscale {
+  background-image: linear-gradient(45deg, #fff, #333);
+}
+
+nav .rainbow {
+  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.7), rgba(0, 255, 0, 0.7), rgba(0, 0, 255, 0.7));
+}
+
+nav .reset {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+footer {
+  text-align: center;
+}
+
+.container {
+  height: 702px;
+  width: 702px;
+  margin: 10px auto;
+  border: 1px solid #000;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[var];
+      grid-template-rows: repeat(var(--grid-rows), 1fr);
+  -ms-grid-columns: (1fr)[var];
+      grid-template-columns: repeat(var(--grid-rows), 1fr);
+}
+
+.grid-item {
+  border: 1px solid #ddd;
+  text-align: center;
+  background: #fff;
+  height: 1fr;
+  width: auto;
+}
